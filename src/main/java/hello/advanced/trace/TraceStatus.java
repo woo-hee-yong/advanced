@@ -1,0 +1,22 @@
+package hello.advanced.trace;
+
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@RequiredArgsConstructor
+public class TraceStatus {
+
+    private TraceId traceId;
+    private Long startTimeMs;
+    private String message;
+
+
+    public TraceStatus(TraceId traceId, Long startTimeMs, String message) {
+        this.traceId = traceId;
+        this.startTimeMs = startTimeMs;
+        this.message = message;
+    }
+}
